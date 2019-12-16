@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <app-quote-grid :quotes="quotes"></app-quote-grid>
+        <app-quote-grid :quoteProp="quotes"></app-quote-grid>
     </div>
 </template>
 
@@ -14,8 +14,7 @@
                     'One testing element',
                     'Second Element',
                     'Third element!',
-                    'Fourth element!',
-                    'The last element!'
+                    'Fourth element!'
                 ],
                 maxQuotes: 10
             }
