@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <app-new-quote v-on:quoteCreated="addQuote"></app-new-quote>
-        <app-quote-grid v-bind:quoteProp="quotes"></app-quote-grid>
+        <app-quote-grid v-bind:quoteProp="quotes" v-on:quoteDeleted="eraseQuote"></app-quote-grid>
         <div class="row">
             <div class="col-sm-12 text-center">
                 <div class="alert alert-info">Info: Click on a quote to Delete it!</div>
@@ -30,8 +30,12 @@
             addQuote: function(quote) {
                 if (quote.length > 0) 
                 {
-                    this.quotes.push(quote)
+                    this.quotes.push(quote);
                 }
+            },
+            eraseQuote: function(index) {
+                console.log('erasing quote...', index);
+                this.quotes.splice(index, 1);
             }
         },
         components: {
