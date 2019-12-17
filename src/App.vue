@@ -2,6 +2,11 @@
     <div class="container">
         <app-new-quote v-on:quoteCreated="addQuote"></app-new-quote>
         <app-quote-grid v-bind:quoteProp="quotes"></app-quote-grid>
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <div class="alert alert-info">Info: Click on a quote to Delete it!</div>
+            </div>
+        </div>
     </div>
 </template>
 
